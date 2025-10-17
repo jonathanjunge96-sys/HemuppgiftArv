@@ -31,7 +31,7 @@ namespace HemuppgiftArv.Game
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"Fel vid inmatning: {e.Message}"); //testat implementera try catch för att undvika krasch
+                    Console.WriteLine($"Fel vid inmatning: {e.Message}"); //implementerat try catch för att undvika krasch
                 }
 
                 

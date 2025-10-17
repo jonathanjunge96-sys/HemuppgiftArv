@@ -14,7 +14,7 @@ namespace HemuppgiftArv.Game
         { 
             UserId = userId;    
         }
-        public abstract int TakePins(Board board);//metod att overrida i subklasser
+        public abstract int TakePins(Board board);//metod att overrida i subklasser, definieras bara
     }
 
 
