@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HemuppgiftArv.Game
 {
-    internal class Board
+    public class Board
     {
         private int noPins; //räknare
 
@@ -25,14 +26,28 @@ namespace HemuppgiftArv.Game
                 Console.WriteLine("Du måste ta en eller två stickor!");
                 return;
             }
-            if (pinsTaken < noPins)
+            if (pinsTaken > noPins)
+            {
+                Console.WriteLine("Det finns inte så många stickor kvar!"); 
+                return;
+            }
+
+            noPins -= pinsTaken; //Tar bort pins från räknare
 
         }
-            
-            
-        
-        
 
-
+        public int GetNoPins() //returnerar antal kvarvarande pins
+        {  
+            return noPins; 
+        }  
     }
 }
+
+           
+
+            
+            
+        
+        
+
+
